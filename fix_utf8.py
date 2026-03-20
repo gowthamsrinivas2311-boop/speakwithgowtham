@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+import io
+
+html_content = """<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -203,7 +205,7 @@
               <span>Freezing before presentations</span>
             </li>
             <li class="transform__item transform__item--before reveal">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                 stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10" />
                 <path d="m15 9-6 6" />
@@ -221,7 +223,7 @@
               <span>Avoiding group discussions</span>
             </li>
             <li class="transform__item transform__item--before reveal">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                 stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10" />
                 <path d="m15 9-6 6" />
@@ -601,3 +603,7 @@
 </body>
 
 </html>
+"""
+
+with io.open("index.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
